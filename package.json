@@ -8,9 +8,11 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:cli": "pnpm test -- --browsers ChromeHeadless --no-watch",
-    "test:coverage": "pnpm test -- --code-coverage",
+    "test:coverage": "pnpm test:cli --code-coverage ",
     "commitlint": "commitlint --edit",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "private": true,
   "dependencies": {
@@ -32,7 +34,10 @@
     "@angular/compiler-cli": "^18.0.0",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@eslint/js": "^9.5.0",
     "@types/jasmine": "~5.1.0",
+    "eslint": "~9.5.0",
+    "globals": "^15.6.0",
     "husky": "^9.0.11",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
@@ -40,6 +45,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.4.2"
+    "typescript": "~5.4.2",
+    "typescript-eslint": "^7.13.1"
   }
 }
