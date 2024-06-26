@@ -1,7 +1,6 @@
 import globals from 'globals';
 import pluginJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
-import node from 'eslint-plugin-node';
 
 export default [
   {
@@ -46,7 +45,6 @@ export default [
   {
     files: ['**/*.{js,mjs,cjs}'],
     languageOptions: { globals: globals.node },
-    plugins: { node: node },
     rules: {
       indent: ['error', 2],
       quotes: ['error', 'single'],
