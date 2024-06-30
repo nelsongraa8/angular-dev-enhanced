@@ -3,6 +3,8 @@ import pluginJs from '@eslint/js';
 import tseslint from 'typescript-eslint';
 
 export default [
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
   {
     files: ['**/*.{ts}'],
     languageOptions: { globals: globals.browser },
@@ -56,8 +58,53 @@ export default [
       eqeqeq: ['error', 'always'],
       curly: 'error',
       'no-console': 'warn',
+      'global-require': 'off', // Desactiva la regla que requiere el uso de import en lugar de require
+      'no-require-imports': 'off', // Desactiva la regla que prohíbe el uso de require para importar
+      'import/no-commonjs': 'off', // Desactiva la regla que prohíbe el uso de la sintaxis CommonJS
+      '@typescript-eslint/no-var-requires': 'off', // Desactiva la regla que prohíbe el uso de require
     },
   },
-  pluginJs.configs.recommended,
-  ...tseslint.configs.recommended,
+  {
+    ignores: [
+      // Compiled output
+      '/dist',
+      '/tmp',
+      '/out-tsc',
+      '/bazel-out',
+
+      // Node
+      '/node_modules',
+      'npm-debug.log',
+      'yarn-error.log',
+
+      // IDEs and editors
+      '.idea/',
+      '.project',
+      '.classpath',
+      '.c9/',
+      '*.launch',
+      '.settings/',
+
+      // Visual Studio Code
+      '.vscode/*',
+      '!.vscode/settings.json',
+      '!.vscode/tasks.json',
+      '!.vscode/launch.json',
+      '!.vscode/extensions.json',
+      '.history/*',
+
+      // Miscellaneous
+      '.angular/*',
+      '.sass-cache/*',
+      '/connect.lock',
+      '/coverage',
+      '/libpeerconnection.log',
+      'testem.log',
+      '/typings',
+
+      // System files
+      '.DS_Store',
+      'Thumbs.db',
+    ],
+  },
 ];
