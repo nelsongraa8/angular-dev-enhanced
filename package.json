@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:cli": "pnpm test -- --browsers ChromeHeadless --no-watch",
-    "test:coverage": "pnpm test:cli --code-coverage ",
+    "test:coverage": "pnpm test:cli --code-coverage",
     "commitlint": "commitlint --edit",
     "prepare": "husky",
     "lint": "eslint .",
