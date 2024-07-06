@@ -11,8 +11,8 @@
     "test:coverage": "pnpm test:cli --code-coverage",
     "commitlint": "commitlint --edit",
     "prepare": "husky",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint": "pnpm eslint .",
+    "lint:fix": "pnpm eslint . --fix"
   },
   "private": true,
   "dependencies": {
@@ -36,9 +36,9 @@
     "@commitlint/config-conventional": "^19.2.2",
     "@eslint/js": "^9.5.0",
     "eslint": "~9.5.0",
-    "globals": "^15.6.0",
+    "typescript-eslint": "^7.13.1",
     "husky": "^9.0.11",
-    "typescript": "~5.4.2",
-    "typescript-eslint": "^7.13.1"
+    "globals": "^15.6.0",
+    "typescript": "~5.4.2"
   }
 }
