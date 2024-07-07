@@ -4,9 +4,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/spec", // directorio de salida de los archivos transpilados
-    "types": [
-      "jest" // indica que se esta utilizando jest para las pruebas unitarias
-    ],
+    "types": ["jest"], // tipos de archivos a incluir
     "forceConsistentCasingInFileNames": true // fuerza un formato de nombre de archivo consistente
   },
   "include": [

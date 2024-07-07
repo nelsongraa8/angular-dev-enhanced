@@ -6,9 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "test:cli": "pnpm test -- --browsers ChromeHeadless --no-watch",
-    "test:coverage": "pnpm test:cli --code-coverage",
+    "test": "jest --coverage --coverageDirectory=tests/coverage",
     "commitlint": "commitlint --edit",
     "prepare": "husky",
     "lint": "pnpm eslint .",
@@ -35,10 +33,20 @@
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@eslint/js": "^9.5.0",
+    "@types/jest": "^29.5.12",
     "eslint": "~9.5.0",
-    "typescript-eslint": "^7.13.1",
-    "husky": "^9.0.11",
     "globals": "^15.6.0",
-    "typescript": "~5.4.2"
+    "husky": "^9.0.11",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-preset-angular": "^14.1.1",
+    "typescript": "~5.4.2",
+    "typescript-eslint": "^7.13.1"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupFilesAfterEnv": [
+      "<rootDir>/config.jest.ts"
+    ]
   }
 }

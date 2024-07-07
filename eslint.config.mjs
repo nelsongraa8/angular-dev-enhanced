@@ -98,6 +98,7 @@ export default [
       '.sass-cache/*',
       '/connect.lock',
       '/coverage',
+      '/tests/coverage',
       '/libpeerconnection.log',
       'testem.log',
       '/typings',
