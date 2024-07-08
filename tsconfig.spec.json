@@ -3,13 +3,12 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "./out-tsc/spec",
-    "types": [
-      "jasmine"
-    ]
+    "outDir": "./out-tsc/spec", // directorio de salida de los archivos transpilados
+    "types": ["jest"], // tipos de archivos a incluir
+    "forceConsistentCasingInFileNames": true // fuerza un formato de nombre de archivo consistente
   },
   "include": [
-    "src/**/*.spec.ts",
-    "src/**/*.d.ts"
+    "src/**/*.spec.ts", // incluye los archivos de prueba unitaria
+    "src/**/*.d.ts" // incluye los archivos de definición de tipos
   ]
 }
