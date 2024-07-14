@@ -10,7 +10,8 @@
     "commitlint": "commitlint --edit",
     "prepare": "husky",
     "lint": "pnpm eslint .",
-    "lint:fix": "pnpm eslint . --fix"
+    "lint:fix": "pnpm eslint . --fix",
+    "script:test": "node ./scripts/pre-commit-check.js"
   },
   "private": true,
   "dependencies": {
