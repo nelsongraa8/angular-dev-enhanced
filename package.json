@@ -11,7 +11,9 @@
     "prepare": "husky",
     "lint": "pnpm eslint .",
     "lint:fix": "pnpm eslint . --fix",
-    "script:test": "node ./scripts/pre-commit-check.js"
+    "script:test": "node ./scripts/pre-commit-check.js",
+    "playwright": "npx playwright test",
+    "playwright:ui": "npx playwright test --ui"
   },
   "private": true,
   "dependencies": {
