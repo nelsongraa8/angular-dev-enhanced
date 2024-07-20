@@ -2,11 +2,17 @@ module.exports = {
   preset: 'jest-preset-angular',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'], // codigo antes de ejecutar cada test
   moduleNameMapper: {
-    '@app/(.)': '<rootDir>/src/app/$1',
-    '@src/(.)': '<rootDir>/src/$1'
+    '@app/(.*)': '<rootDir>\\src\\app\\$1',
+    '@src/(.*)': '<rootDir>\\src\\$1'
   },
   testEnvironment: 'jest-environment-jsdom',
-  testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/dist/', '<rootDir>/tests/coverage/'],
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/dist/',
+    '<rootDir>/tests/coverage/',
+    '<rootDir>/tests/e2e/',
+    '<rootDir>/tests/performance/'
+  ],
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.ts',
