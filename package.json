@@ -12,7 +12,7 @@
     "lint": "pnpm eslint .",
     "lint:fix": "pnpm eslint . --fix",
     "script:test": "node ./scripts/pre-commit-check.js",
-    "playwright": "npx playwright test",
+    "playwright": "npx playwright test --config playwright.config.ts",
     "playwright:ui": "npx playwright test --ui"
   },
   "private": true,
