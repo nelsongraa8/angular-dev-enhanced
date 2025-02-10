@@ -1,0 +1,31 @@
+{
+    "name": "visor-angular",
+    "dockerComposeFile": "../.docker/dev/docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/usr/src/app",
+    "forwardPorts": [
+      4200
+    ],
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "Angular.ng-template",
+          "dbaeumer.vscode-eslint",
+          "esbenp.prettier-vscode",
+          "github.copilot",
+          "github.copilot-chat",
+          "johnpapa.angular-essentials",
+          "ms-ceintl.vscode-language-pack-es",
+          "johnpapa.Angular2",
+          "eamodio.gitlens"
+        ],
+        "settings": {
+          "terminal.integrated.defaultProfile.linux": "bash",
+          "editor.formatOnSave": true
+        }
+      }
+    },
+    "remoteEnv": {
+      "NODE_ENV": "development"
+    }
+  }
