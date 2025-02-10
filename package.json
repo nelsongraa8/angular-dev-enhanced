@@ -2,11 +2,9 @@
 	"name": "angular-dev-enhanced",
 	"version": "0.0.0",
 	"scripts": {
-		"ng": "ng",
 		"start": "ng serve --host 0.0.0.0",
 		"build": "ng build",
 		"build:prod": "ng build --prod",
-		"watch": "ng build --watch --configuration development",
 		"test": "jest --config=jest.config.js --coverage --coverageDirectory=./.coverage/jest --logHeapUsage",
 		"commitlint": "commitlint --edit",
 		"prepare": "husky",
@@ -14,9 +12,7 @@
 		"lint:fix": "pnpm eslint . --fix",
 		"script:test": "node ./scripts/pre-commit-check.js",
 		"playwright": "npx playwright test --config playwright.config.ts",
-		"playwright:ui": "npx playwright test --ui",
-		"docker:dev": "docker build -t angular-dev-enhanced . && docker run -p 4200:4200 angular-docker",
-		"docker:prod": "docker build -t angular-dev-enhanced . && docker run -p 80:80 angular-docker"
+		"playwright:ui": "npx playwright test --ui"
 	},
 	"private": true,
 	"dependencies": {
