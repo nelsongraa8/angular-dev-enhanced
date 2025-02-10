@@ -46,3 +46,7 @@ Thumbs.db
 /playwright-report/
 /blob-report/
 /playwright/.cache/
+
+# pnpm
+/.pnpm-store
+/.scannerwork
