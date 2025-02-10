@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  app:
+    container_name: visor-angular
+    build:
+      context: ../../
+      dockerfile: .docker/dev/Dockerfile
+    volumes:
+      - ../../:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - NODE_ENV=development
+    restart: unless-stopped
+    command: sleep infinity
+    networks:
+      - sonarnet
+
+networks:
+  sonarnet:
+    driver: bridge
