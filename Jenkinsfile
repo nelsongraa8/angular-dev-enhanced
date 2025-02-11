@@ -1,5 +1,10 @@
 pipeline {
     agent any
+
+    triggers {
+        pollSCM('H/5 * * * *')
+    }
+
     stages {
         stage('Checkout') {
             steps {
@@ -25,6 +30,18 @@ pipeline {
             steps {
                 echo 'Aquí iría el despliegue'
             }
+        }
+    }
+
+    post {
+        always {
+            cleanWs() // Limpia el workspace después de la ejecución
+        }
+        success {
+            echo 'Build successful!'
+        }
+        failure {
+            echo 'Build failed!'
         }
     }
 }
