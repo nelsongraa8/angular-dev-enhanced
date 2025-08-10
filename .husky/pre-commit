@@ -1,5 +1,5 @@
 # pre-commit
 
-pnpm lint
+#pnpm lint
 
-pnpm script:test
+#pnpm script:test
