@@ -1,0 +1,28 @@
+# Ignorar dependencias y builds
+node_modules
+.pnpm_store
+dist
+.devcontainer
+.docker
+.vscode
+
+# Archivos de entorno y lockfiles
+pnpm-lock.yaml
+angular.json
+commitlint.config.cjs
+eslint.config.js
+jest.config.js
+jest.setup.ts
+playwright.config.ts
+README.md
+stylelint.config.mjs
+tsconfig.app.json
+tsconfig.json
+tsconfig.spec.json
+
+# Configuración de Husky o scripts internos
+.husky
+scripts
+
+# Public
+public
