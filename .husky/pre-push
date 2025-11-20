@@ -1,5 +1,1 @@
-# pre-push
-
-pnpm test
-
-pnpm playwright
+node scripts/pre-push.js

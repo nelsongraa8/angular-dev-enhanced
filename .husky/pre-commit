@@ -1,5 +1,1 @@
-# pre-commit
-
-#pnpm lint
-
-#pnpm script:test
+node scripts/pre-commit.js
