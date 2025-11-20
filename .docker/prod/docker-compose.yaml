@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    image: app-angular:latest
+    container_name: app-angular
+    build:
+      context: ../../
+      dockerfile: .docker/prod/Dockerfile
+    ports:
+      - "8080:80"
+    restart: unless-stopped
